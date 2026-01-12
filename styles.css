@@ -3,7 +3,7 @@ body{
     padding:0;
     margin-top:45px;
     width: 83.33%; /*1512 ancho total html*/  /*1260*100 / 1512 = 83.33 %*/
-    /*height:600px;*/
+    height:600px;
     font-size:15px;
 }
 
@@ -120,4 +120,5 @@ img{
     }
 
   
+
 }
