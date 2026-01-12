@@ -1,0 +1,123 @@
+body{
+    margin:0;
+    padding:0;
+    margin-top:45px;
+    width: 83.33%; /*1512 ancho total html*/  /*1260*100 / 1512 = 83.33 %*/
+    /*height:600px;*/
+    font-size:15px;
+}
+
+header, nav, footer{
+    width:100%; /*100 % ancho del body %*/
+    height:100px;
+}
+nav ul, h1{
+    margin:0;
+}
+
+
+/*específicos*/
+header{
+    background-color: coral;
+}
+
+nav{
+    background-color:lightblue;
+}
+
+footer{
+    background-color:lightblue;
+    clear:both; /*Romper el flotamiento para que el footer baje*/
+}
+
+#caja1{
+    background-color:darkkhaki;
+    width:61.904%; /*780 * 100 / 1260 = 61.904 %*/
+    height:370px; /*370px +30px (padding top) =400px alto total*/
+    /*padding:0 10px 30px 10px; /*10*100/780(ancho caja1) = 1.25%(ancho del contenedor)*/
+    margin:0 1.58% 0 1.58%; /*20*100 / 1260 (ancho body) = 1.587 %*/
+    padding:2.38% 0.79% 0 0.79%; /* 10*100 / 1260(ancho del body) = 0.79% padding left, right-------- 30*100 / 1260(ancho del body) = 2.38% padding top*/
+    float:left;
+    position:relative; /*para poder colocar el formulario con respecto a esta caja (caja contenedora)*/
+}
+
+#caja2{
+    width:29.365%; /*370 * 100 / 1260= 29.36%*/
+    height:350px; /*350 + 50 padding top = 400px*/
+    margin-right:1.58%; /*20*100/1260 = 1.58%*/
+    float:left;
+    background-color:darkgrey;
+    padding:3.968% 0 0 2.38%; /* top: 50*100 /1260 =  3.968%   left:30*100 / 1260 = 2.38%*/
+}
+
+#caja2 div{ /*DIV QUE CONTIENE LA IMAGEN*/
+    width:40.54%; /*150*100 / 370 (ancho caja padre (#caja2)) = 40.54%*/
+    height:auto;
+}
+
+form{
+    margin:0 0 4em 0; /*4 VECES EL TAMAÑO DE LA LETRA DE LA CAJA PADRE (body) = 60px (15px*4)*/
+    padding: 1em 0 1em 8.97%; /*1 em = 15px ------- 70*100/780=8.97*/
+    position: absolute;
+    top:200px; /*Colocarlo a 200px sobre el borde de la caja padre*/
+    width:70.4%; /*710 * 100 / 710 = 70.4*/ /*710 - MEDIDA QUE SALÍA EN EL F12. SI NO LA PONGO ME DA ERROR*/
+}
+
+input[type="text"],  input[type="email"]{
+  width: 70.42%; /*500*100/710 = 70.42%*/ /*710 PX ANCHO USABLE FORM*/
+  padding-left:10px;
+}
+
+input[type="submit"]{
+    width:21.12%; /*150 *100 /710 =21.12%*/
+    height:2em;
+    background-color:#D8D8D8;
+    padding:0px;
+}
+
+input, label{
+    display:block;
+}
+
+h1{
+    text-align:center;
+}
+nav li{
+    list-style-type: none;
+    float:left;
+}
+
+#enlace2{
+    float:right;
+    margin-right: 2.62%; /*SEPARARLO DEL BORDE*/ /*40 * 100 /1512 = 2.62*/
+}
+
+img{
+    width:100%; /*PARA QUE COJA ANCHO Y ALTO TOTAL DEL DIV PADRE*/
+    height:100%;
+}
+
+
+@media (max-width: 1024px) {
+    #caja1,#caja2{
+        float:none;
+    }
+    #caja2{
+        margin-left:1.58%; /*20*100/1260 = 1.58%*/
+        margin-right: 0; /*Le quitamos el margin right, ya que no tiene sentido, no hay elementos al lado suyo*/
+    }
+    footer p{
+        margin:0; /*Metía un margen superior por encima del footer*/
+    }
+    #caja2 div{ /*DIV QUE CONTIENE LA IMAGEN*/
+        width:60%;
+        height:auto;
+    }
+
+    form{
+        position:static; /*Position por defecto de los elementos*/
+        margin-top:2em;
+    }
+
+  
+}
